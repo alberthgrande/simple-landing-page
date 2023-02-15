@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="navbar__title title">Nyako</h1>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="navClose()"></i>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="navOpen()"></i>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section__one">
+          <h2 class="section__title title">Lorem, ipsum dolor.</h2>
+          <p class="section__content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+            tempora veniam cupiditate, magni odit doloremque.
+          </p>
+        </section>
+        <section class="section__two">
+          <a href="https://pin.it/7862Sxw" target="_blank">
+            <img
+              class="cat__image"
+              src="./img/Pin by brisongbird _ Perfected in Him on ♡ f u r r y - b a b i e s ♡ _ Cute cats photos, Pretty cats, Baby cats.jpg"
+              alt=""
+            />
+          </a>
+        </section>
+      </div>
+      <footer>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const navLinks = document.getElementById("navLinks");
+      const faBars = document.querySelector(".fa-bars");
+
+      function navClose() {
+        navLinks.style.right = "-50%";
+      }
+
+      function navOpen() {
+        navLinks.style.right = "0";
+      }
+    </script>
+  </body>
+</html>

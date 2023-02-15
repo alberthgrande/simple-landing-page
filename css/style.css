@@ -1,0 +1,130 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,400;1,700&display=swap");
+
+:root {
+  --font-family: "Space Mono", monospace;
+
+  --fw-text-400: 400;
+  --fw-title-700: 700;
+
+  --title-color: #201304;
+  --text-color: #8c4e44;
+  --text-hover: #b3a191;
+
+  --bg-navbar: #bea586;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.3rem;
+  font-family: var(--font-family);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 5rem;
+}
+
+.section__two .cat__image {
+  height: 25rem;
+  border-radius: 5rem 0 5rem 0;
+  object-fit: cover;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 5rem;
+}
+nav ul {
+  display: inline-flex;
+  gap: 1.5rem;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav .fa-solid {
+  display: none;
+}
+.title {
+  color: var(--title-color);
+}
+
+/* section */
+.section__title {
+  margin: 1rem 0;
+}
+.section__content {
+  color: var(--text-color);
+  margin: 1rem 0;
+  max-width: 650px;
+}
+.social-media {
+  text-align: center;
+  padding: 1.5rem;
+}
+.social-media .fa-brands {
+  color: var(--text-color);
+  font-size: 1.8rem;
+}
+
+/* media query */
+@media only screen and (max-width: 48rem) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav .nav-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--bg-navbar);
+
+    transition: 0.5s;
+  }
+
+  nav .nav-links ul {
+    display: block;
+    padding: 5rem 2rem;
+  }
+
+  nav .nav-links li {
+    margin: 1rem 0;
+  }
+  nav .nav-links li a {
+    color: #fff;
+  }
+
+  nav .fa-solid {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav .fa-xmark {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}
