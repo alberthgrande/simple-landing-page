@@ -72,8 +72,8 @@ nav .fa-solid {
 .section__content {
   color: var(--text-color);
   margin: 1rem 0;
-  max-width: 650px;
 }
+
 .social-media {
   text-align: center;
   padding: 1.5rem;
@@ -84,14 +84,29 @@ nav .fa-solid {
 }
 
 /* media query */
+@media only screen and (min-width: 48rem) {
+  .section__content {
+    margin: 1rem 0;
+    max-width: 650px;
+  }
+}
 @media only screen and (max-width: 48rem) {
   .container {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    margin: 3rem 3rem;
   }
 
+  .section__title {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .section__content {
+    width: 100%;
+  }
   nav .nav-links {
     position: absolute;
     top: 0;
